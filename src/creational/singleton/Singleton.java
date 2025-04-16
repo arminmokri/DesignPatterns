@@ -16,6 +16,7 @@ public class Singleton implements Printer {
         return singleton;
     }
 
+    @Override
     public void print(String text) {
         try {
             for (char c : text.toCharArray()) {

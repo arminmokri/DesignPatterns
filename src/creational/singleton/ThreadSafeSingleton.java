@@ -21,6 +21,7 @@ public class ThreadSafeSingleton implements Printer {
         return singleton;
     }
 
+    @Override
     public synchronized void print(String text) {
         try {
             for (char c : text.toCharArray()) {
