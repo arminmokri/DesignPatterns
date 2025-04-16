@@ -26,3 +26,5 @@ The **Singleton** pattern ensures that a class has only one instance and provide
 - **Lazy Initialization**: To avoid unnecessary object creation, the Singleton instance should ideally be created only when it’s needed (lazy initialization), which helps improve performance and resource usage.
 
 - **Global Access**: The Singleton class should provide a global access point to its instance (often through a static method), but care must be taken to not overexpose the Singleton and tightly couple the rest of the system to it.
+
+[< Back To Design Patterns](../../../)
