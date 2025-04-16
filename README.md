@@ -1,10 +1,10 @@
 # Design Patterns
 ### Please support my repo with your star.
 
-### Creational
+## Creational
 #### 1- [Singleton](src/creational/singleton)
 
 ## Structural
 
-### Behavioral
+## Behavioral
 #### 1- [Observer](src/behavioral/observer)
