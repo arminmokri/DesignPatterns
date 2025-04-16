@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PriceManager {
-    private final List<PriceObserver> subscribers = new ArrayList<>();
+    private final List<PriceObserver> subscribers;
     private float price;
+
+    public PriceManager() {
+        subscribers = new ArrayList<>();
+    }
 
     public void subscribe(PriceObserver observer) {
         subscribers.add(observer);

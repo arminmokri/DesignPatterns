@@ -2,7 +2,7 @@ package behavioral.observer;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         PriceManager priceManager = new PriceManager();
 
         // Creating observers
@@ -14,13 +14,17 @@ public class Main {
         priceManager.subscribe(webView);
 
         // Simulate price updates
+        Thread.sleep(2000);
         priceManager.setPrice(99.99f);
+
+        Thread.sleep(2000);
         priceManager.setPrice(89.49f);
 
         // unsubscribe observers
         priceManager.unsubscribe(mobileView);
 
         // Simulate price updates
+        Thread.sleep(2000);
         priceManager.setPrice(100.12f);
     }
 }
