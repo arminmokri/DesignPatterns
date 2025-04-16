@@ -1,3 +1,5 @@
+[< Back To Design Patterns](../../../)
+
 # Singleton
 ### Please support my repo with your star.
 
