@@ -2,18 +2,18 @@ package creational.singleton;
 
 import java.util.Objects;
 
-public class Singleton implements Printer {
+public class ThreadUnsafePrinter implements Printer {
 
-    private static Singleton singleton;
+    private static ThreadUnsafePrinter printer;
 
-    private Singleton() {
+    private ThreadUnsafePrinter() {
     }
 
-    public static Singleton getInstance() {
-        if (Objects.isNull(singleton)) {
-            singleton = new Singleton();
+    public static ThreadUnsafePrinter getInstance() {
+        if (Objects.isNull(printer)) {
+            printer = new ThreadUnsafePrinter();
         }
-        return singleton;
+        return printer;
     }
 
     @Override

@@ -6,20 +6,14 @@ public class Main {
 
         // Thread Safe singleton printer
 
-        Thread threadA = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Printer printer = ThreadSafeSingleton.getInstance();
-                printer.print("Thread Safe Printer A is running.");
-            }
+        Thread threadA = new Thread(() -> {
+            Printer printer = ThreadSafePrinter.getInstance();
+            printer.print("Thread Safe Printer A is running fine.");
         });
 
-        Thread threadB = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Printer printer = ThreadSafeSingleton.getInstance();
-                printer.print("Thread Safe Printer B is running.");
-            }
+        Thread threadB = new Thread(() -> {
+            Printer printer = ThreadSafePrinter.getInstance();
+            printer.print("Thread Safe Printer B is running fine.");
         });
 
         threadA.start();
@@ -28,36 +22,27 @@ public class Main {
         threadA.join();
         threadB.join();
 
-        // Regular singleton printer
+        // if you don't have multithreading Thread Unsafe singleton printer is fine
 
-        Thread threadC = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Printer printer = Singleton.getInstance();
-                printer.print("Regular Printer C is running.");
-            }
+        Thread threadC = new Thread(() -> {
+            Printer printer = ThreadUnsafePrinter.getInstance();
+            printer.print("Thread Unsafe Printer C is running fine.");
         });
 
         threadC.start();
 
         threadC.join();
 
-        // Thread Unsafe singleton printer
+        // but if you have multithreading Thread Unsafe singleton printer is wrong
 
-        Thread threadD = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Printer printer = Singleton.getInstance();
-                printer.print("Thread Unsafe Printer D is running.");
-            }
+        Thread threadD = new Thread(() -> {
+            Printer printer = ThreadUnsafePrinter.getInstance();
+            printer.print("Thread Unsafe Printer D is running wrong.");
         });
 
-        Thread threadE = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Printer printer = Singleton.getInstance();
-                printer.print("Thread Unsafe Printer E is running.");
-            }
+        Thread threadE = new Thread(() -> {
+            Printer printer = ThreadUnsafePrinter.getInstance();
+            printer.print("Thread Unsafe Printer E is running wrong.");
         });
 
         threadD.start();

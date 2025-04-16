@@ -2,23 +2,23 @@ package creational.singleton;
 
 import java.util.Objects;
 
-public class ThreadSafeSingleton implements Printer {
+public class ThreadSafePrinter implements Printer {
 
-    private static ThreadSafeSingleton singleton;
+    private static ThreadSafePrinter printer;
 
-    private ThreadSafeSingleton() {
+    private ThreadSafePrinter() {
     }
 
-    public static ThreadSafeSingleton getInstance() {
-        if (Objects.isNull(singleton)) {
-            synchronized (ThreadSafeSingleton.class) {
-                if (Objects.isNull(singleton)) {
-                    singleton = new ThreadSafeSingleton();
+    public static ThreadSafePrinter getInstance() {
+        if (Objects.isNull(printer)) {
+            synchronized (ThreadSafePrinter.class) {
+                if (Objects.isNull(printer)) {
+                    printer = new ThreadSafePrinter();
                 }
             }
         }
 
-        return singleton;
+        return printer;
     }
 
     @Override
