@@ -18,7 +18,7 @@
 #### 7- [Proxy](src/structural/proxy) ❌
 
 ## Behavioral
-#### 1- [Chain of Responsibility](src/behavioral/chain_of_responsibility) ❌
+#### 1- [Chain of Responsibility](src/behavioral/chain_of_responsibility) ✅
 #### 2- [Command](src/behavioral/command) ❌
 #### 3- [Iterator](src/behavioral/iterator) ❌
 #### 4- [Mediator](src/behavioral/mediator) ❌
