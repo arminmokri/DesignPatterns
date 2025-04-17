@@ -5,7 +5,7 @@
 #### 1- [Factory Method](src/creational/factory_method) ❌
 #### 2- [Abstract Factory](src/creational/abstract_factory) ❌
 #### 3- [Builder](src/creational/builder) ❌
-#### 4- [Prototype](src/creational/prototype) ❌
+#### 4- [Prototype](src/creational/prototype) ✅
 #### 5- [Singleton](src/creational/singleton) ✅
 
 ## Structural
@@ -18,7 +18,7 @@
 #### 7- [Proxy](src/structural/proxy) ❌
 
 ## Behavioral
-#### 1- [Chain of Responsibility](src/behavioral/chain_of_responsibility) ❌
+#### 1- [Chain of Responsibility](src/behavioral/chain_of_responsibility) ✅
 #### 2- [Command](src/behavioral/command) ❌
 #### 3- [Iterator](src/behavioral/iterator) ❌
 #### 4- [Mediator](src/behavioral/mediator) ❌
