@@ -2,7 +2,6 @@ package behavioral.chain_of_responsibility.service;
 
 import behavioral.chain_of_responsibility.HttpRequest;
 import behavioral.chain_of_responsibility.HttpRequestHandler;
-import behavioral.chain_of_responsibility.exception.PageNotFound;
 
 import java.util.Objects;
 

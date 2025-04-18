@@ -5,8 +5,6 @@ import behavioral.chain_of_responsibility.HttpRequest;
 import behavioral.chain_of_responsibility.HttpRequestHandler;
 import behavioral.chain_of_responsibility.rbac.User;
 
-import java.util.Objects;
-
 public class AuthenticationService extends HttpRequestHandler {
 
     @Override

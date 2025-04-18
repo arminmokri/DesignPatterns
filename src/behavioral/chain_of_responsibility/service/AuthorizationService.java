@@ -6,8 +6,6 @@ import behavioral.chain_of_responsibility.rbac.Role;
 import behavioral.chain_of_responsibility.rbac.RoleUrlMapper;
 import behavioral.chain_of_responsibility.rbac.User;
 
-import java.util.Objects;
-
 public class AuthorizationService extends HttpRequestHandler {
 
     @Override
