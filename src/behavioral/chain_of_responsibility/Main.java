@@ -5,45 +5,85 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         HttpRequestChain httpRequestChain = new HttpRequestChain();
+        HttpRequest httpRequest = null;
 
         try {
-            HttpRequest httpRequest = new HttpRequest("/user", "alice", "741");
+            httpRequest = new HttpRequest("/user", "alice", "741");
             httpRequestChain.processHttpRequest(httpRequest);
-            System.out.println(httpRequest.getResponse());
         } catch (RuntimeException e) {
+        } finally {
+            if (httpRequest.getResponseCode() == 200) {
+                System.out.println(httpRequest.getResponse());
+                System.out.flush();
+            } else {
+                System.err.println("Request failed with error code: " + httpRequest.getResponseCode());
+                System.err.flush();
+            }
         }
 
+        Thread.sleep(3000);
         System.out.println();
         System.out.flush();
-        Thread.sleep(1000);
 
         try {
-            HttpRequest httpRequest = new HttpRequest("/admin", "alice", "123");
+            httpRequest = new HttpRequest("/admin", "alice", "123");
             httpRequestChain.processHttpRequest(httpRequest);
-            System.out.println(httpRequest.getResponse());
+
         } catch (RuntimeException e) {
+        } finally {
+            if (httpRequest.getResponseCode() == 200) {
+                System.out.println(httpRequest.getResponse());
+            } else {
+                System.err.println("Request failed with error code: " + httpRequest.getResponseCode());
+            }
         }
 
+        Thread.sleep(3000);
         System.out.println();
         System.out.flush();
-        Thread.sleep(1000);
 
         try {
-            HttpRequest httpRequest = new HttpRequest("/admin", "admin", "admin");
+            httpRequest = new HttpRequest("/admin", "admin", "admin");
             httpRequestChain.processHttpRequest(httpRequest);
-            System.out.println(httpRequest.getResponse());
         } catch (RuntimeException e) {
+        } finally {
+            if (httpRequest.getResponseCode() == 200) {
+                System.out.println(httpRequest.getResponse());
+            } else {
+                System.err.println("Request failed with error code: " + httpRequest.getResponseCode());
+            }
         }
 
+        Thread.sleep(3000);
         System.out.println();
         System.out.flush();
-        Thread.sleep(1000);
 
         try {
-            HttpRequest httpRequest = new HttpRequest("/user", "alice", "123");
+            httpRequest = new HttpRequest("/user", "alice", "123");
             httpRequestChain.processHttpRequest(httpRequest);
-            System.out.println(httpRequest.getResponse());
         } catch (RuntimeException e) {
+        } finally {
+            if (httpRequest.getResponseCode() == 200) {
+                System.out.println(httpRequest.getResponse());
+            } else {
+                System.err.println("Request failed with error code: " + httpRequest.getResponseCode());
+            }
+        }
+
+        Thread.sleep(3000);
+        System.out.println();
+        System.out.flush();
+
+        try {
+            httpRequest = new HttpRequest("/about_us", "alice", "123");
+            httpRequestChain.processHttpRequest(httpRequest);
+        } catch (RuntimeException e) {
+        } finally {
+            if (httpRequest.getResponseCode() == 200) {
+                System.out.println(httpRequest.getResponse());
+            } else {
+                System.err.println("Request failed with error code: " + httpRequest.getResponseCode());
+            }
         }
     }
 }

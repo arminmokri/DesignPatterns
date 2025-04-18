@@ -17,14 +17,13 @@ public class AuthenticationService extends HttpRequestHandler {
 
         User user = User.getUser(username);
         if (user.isPasswordValid(password)) {
-            System.out.println("AuthenticationService username='" + username + "' and password='" + password + "' is correct.");
-            if (Objects.nonNull(getNext())) {
-                getNext().handle(httpRequest);
-            }
-        } else {
-
-            // Drop request
-            System.err.println("AuthenticationService username='" + username + "' and password='" + password + "' is not correct.");
+            System.out.println("AuthenticationService username='" + username + "' and password='" + "****" + "' is correct.");
+            System.out.flush();
+            this.goNext(httpRequest);
+        } else { // Drop request
+            System.err.println("AuthenticationService username='" + username + "' and password='" + "****" + "' is not correct.");
+            System.err.flush();
+            httpRequest.setResponseCode(401);
             throw new AccessDenied("access denied, wrong username or password.");
         }
 

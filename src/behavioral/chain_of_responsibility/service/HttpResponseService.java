@@ -23,13 +23,15 @@ public class HttpResponseService extends HttpRequestHandler {
             case "/user" -> pageUser;
             case "/dashboard" -> pageDashboard;
             case "/profile" -> pageProfile;
-            default -> throw new PageNotFound("Unable to resolve url='" + url + "'");
+            default -> null;
         };
 
-        httpRequest.setResponse(response);
-
-        if (Objects.nonNull(getNext())) {
-            getNext().handle(httpRequest);
+        if (Objects.nonNull(response)) {
+            System.out.println("HttpResponseService is ok.");
+            System.out.flush();
+            httpRequest.setResponseCode(200);
+            httpRequest.setResponse(response);
+            this.goNext(httpRequest);
         }
     }
 }

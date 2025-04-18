@@ -21,12 +21,12 @@ public class AuthorizationService extends HttpRequestHandler {
 
         if (RoleUrlMapper.isAccessAllowed(role, url)) {
             System.out.println("AuthorizationService this username '" + username + "' with role=" + role.toString() + " has access to url='" + url + "'");
-            if (Objects.nonNull(getNext())) {
-                getNext().handle(httpRequest);
-            }
-        } else {
-            // Drop request
+            System.out.flush();
+            this.goNext(httpRequest);
+        } else { // Drop request
             System.err.println("AuthorizationService this username '" + username + "' with role=" + role.toString() + " doesn't have access to url='" + url + "'");
+            System.err.flush();
+            httpRequest.setResponseCode(403);
             throw new AccessDenied("access denied, this user cannot access this page");
         }
 

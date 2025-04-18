@@ -1,5 +1,7 @@
 package behavioral.chain_of_responsibility;
 
+import java.util.Objects;
+
 public abstract class HttpRequestHandler {
 
     private HttpRequestHandler next;
@@ -7,6 +9,12 @@ public abstract class HttpRequestHandler {
     public void setNext(HttpRequestHandler httpRequestHandler) {
         this.next = httpRequestHandler;
 
+    }
+
+    public void goNext(HttpRequest httpRequest) {
+        if (Objects.nonNull(getNext())) {
+            getNext().handle(httpRequest);
+        }
     }
 
     public HttpRequestHandler getNext() {

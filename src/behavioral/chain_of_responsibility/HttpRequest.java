@@ -7,6 +7,7 @@ public class HttpRequest {
     private String password;
 
     private String response;
+    private Integer responseCode;
 
     public HttpRequest(String url, String username, String password) {
         this.url = url;
@@ -32,5 +33,13 @@ public class HttpRequest {
 
     public void setResponse(String response) {
         this.response = response;
+    }
+
+    public Integer getResponseCode() {
+        return responseCode;
+    }
+
+    public void setResponseCode(Integer responseCode) {
+        this.responseCode = responseCode;
     }
 }
