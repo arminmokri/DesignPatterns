@@ -72,6 +72,7 @@ public class Main {
 
         Thread.sleep(3000);
         System.out.println();
+
         System.out.flush();
 
         try {
