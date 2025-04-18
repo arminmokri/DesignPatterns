@@ -4,7 +4,7 @@
 ## Creational
 #### 1- [Factory Method](src/creational/factory_method) ❌
 #### 2- [Abstract Factory](src/creational/abstract_factory) ❌
-#### 3- [Builder](src/creational/builder) ❌
+#### 3- [Builder](src/creational/builder) ✅
 #### 4- [Prototype](src/creational/prototype) ✅
 #### 5- [Singleton](src/creational/singleton) ✅
 
