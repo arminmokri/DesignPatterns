@@ -21,7 +21,7 @@
 #### 1- [Chain of Responsibility](src/behavioral/chain_of_responsibility) ✅
 #### 2- [Command](src/behavioral/command) ✅
 #### 3- [Iterator](src/behavioral/iterator) ✅
-#### 4- [Mediator](src/behavioral/mediator) ❌
+#### 4- [Mediator](src/behavioral/mediator) ✅
 #### 5- [Memento](src/behavioral/memento) ❌
 #### 6- [Observer](src/behavioral/observer) ✅
 #### 7- [State](src/behavioral/state) ❌
