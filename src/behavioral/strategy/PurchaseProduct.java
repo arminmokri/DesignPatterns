@@ -7,7 +7,7 @@ import java.util.Objects;
 public class PurchaseProduct {
 
     private final Double totalAmount;
-    private final List<PaymentStrategy> payments;
+    private final List<PaymentEntry> payments;
 
 
     public PurchaseProduct(Double totalAmount) {
@@ -22,7 +22,9 @@ public class PurchaseProduct {
                     System.err.println("Payment failed");
                     System.err.flush();
                 }
-                this.payments.add(paymentStrategy);
+                PaymentEntry paymentEntry = new PaymentEntry(paymentStrategy, amount);
+                paymentEntry.doPayment();
+                payments.add(paymentEntry);
             } else {
                 System.err.println("Payment must be less than remaining amount");
                 System.err.flush();
@@ -41,8 +43,8 @@ public class PurchaseProduct {
     public Double paid() {
         return this.payments
                 .stream()
-                .filter(PaymentStrategy::isSucceed)
-                .map(PaymentStrategy::getAmount)
+                .filter(PaymentEntry::isSucceed)
+                .map(PaymentEntry::getAmount)
                 .mapToDouble(Double::valueOf)
                 .sum();
     }

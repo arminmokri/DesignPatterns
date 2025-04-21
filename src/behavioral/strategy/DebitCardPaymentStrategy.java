@@ -1,14 +1,12 @@
 package behavioral.strategy;
 
-public class DebitCardPaymentStrategy extends PaymentStrategy {
+public class DebitCardPaymentStrategy implements PaymentStrategy {
 
     @Override
     public Boolean pay(Double amount) {
-        super.amount = amount;
-        super.success = Boolean.TRUE;
-        System.out.println("Paid $" + super.amount + " using Debit Card.");
+        System.out.println("Paid $" + amount + " using Debit Card.");
         System.out.flush();
-        return super.success;
+        return Boolean.TRUE;
     }
 
 }

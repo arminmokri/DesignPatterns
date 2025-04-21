@@ -1,14 +1,12 @@
 package behavioral.strategy;
 
-public class ChequePaymentStrategy extends PaymentStrategy {
+public class ChequePaymentStrategy implements PaymentStrategy {
 
     @Override
     public Boolean pay(Double amount) {
-        super.amount = amount;
-        super.success = Boolean.TRUE;
-        System.out.println("Paid $" + super.amount + " using Cheque.");
+        System.out.println("Paid $" + amount + " using Cheque.");
         System.out.flush();
-        return super.success;
+        return Boolean.TRUE;
     }
 
 }
