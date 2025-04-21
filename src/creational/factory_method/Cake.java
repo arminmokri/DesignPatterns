@@ -1,4 +1,4 @@
-package creational.factory;
+package creational.factory_method;
 
 public class Cake implements Pastry {
     @Override

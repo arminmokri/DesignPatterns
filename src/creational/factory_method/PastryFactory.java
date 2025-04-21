@@ -1,4 +1,4 @@
-package creational.factory;
+package creational.factory_method;
 
 public class PastryFactory {
     public Pastry createPastry(String type) {
