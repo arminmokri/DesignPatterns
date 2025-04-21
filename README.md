@@ -2,7 +2,7 @@
 ### Please support my repo with your star.
 
 ## Creational
-#### 1- [Factory Method](src/creational/factory_method) ❌
+#### 1- [Factory Method](src/creational/factory_method) ✅
 #### 2- [Abstract Factory](src/creational/abstract_factory) ❌
 #### 3- [Builder](src/creational/builder) ✅
 #### 4- [Prototype](src/creational/prototype) ✅
