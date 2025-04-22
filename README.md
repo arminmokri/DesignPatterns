@@ -10,7 +10,7 @@
 
 ## Structural
 #### 1- [Adapter](src/structural/adapter) ✅
-#### 2- [Bridge](src/structural/bridge) ❌
+#### 2- [Bridge](src/structural/bridge) ✅
 #### 3- [Composite](src/structural/composite) ❌
 #### 4- [Decorator](src/structural/decorator) ❌
 #### 5- [Facade](src/structural/facade) ❌
