@@ -28,3 +28,15 @@
 #### 8- [Strategy](src/behavioral/strategy) ✅
 #### 9- [Template Method](src/behavioral/template_method) ✅
 #### 10- [Visitor](src/behavioral/visitor) ❌
+
+## Microservices
+#### 1- [API Gateway](src/microservices/api_gateway) ❌
+#### 2- [Database per Service](src/microservices/database_per_service) ❌
+#### 3- [Circuit Breaker](src/microservices/circuit_breaker) ❌
+#### 4- [Service Discovery](src/microservices/service_discovery) ❌
+#### 5- [Event Sourcing](src/microservices/event_sourcing) ❌
+#### 6- [CQRS (Command Query Responsibility Segregation)](src/microservices/cqrs) ❌
+#### 7- [Saga](src/microservices/saga) ❌
+#### 8- [Strangler Fig](src/microservices/strangler_fig) ❌
+#### 9- [Bulkhead](src/microservices/bulkhead) ❌
+#### 10- [Sidecar](src/microservices/sidecar) ❌
