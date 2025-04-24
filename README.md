@@ -24,7 +24,7 @@
 #### 4- [Mediator](src/behavioral/mediator) ✅
 #### 5- [Memento](src/behavioral/memento) ❌
 #### 6- [Observer](src/behavioral/observer) ✅
-#### 7- [State](src/behavioral/state) ❌
+#### 7- [State](src/behavioral/state) ✅
 #### 8- [Strategy](src/behavioral/strategy) ✅
 #### 9- [Template Method](src/behavioral/template_method) ❌
 #### 10- [Visitor](src/behavioral/visitor) ❌
