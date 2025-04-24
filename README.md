@@ -15,7 +15,7 @@
 #### 4- [Decorator](src/structural/decorator) ✅
 #### 5- [Facade](src/structural/facade) ✅
 #### 6- [Flyweight](src/structural/flyweight) ✅
-#### 7- [Proxy](src/structural/proxy) ❌
+#### 7- [Proxy](src/structural/proxy) ✅
 
 ## Behavioral
 #### 1- [Chain of Responsibility](src/behavioral/chain_of_responsibility) ✅
