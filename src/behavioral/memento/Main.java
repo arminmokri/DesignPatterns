@@ -2,26 +2,26 @@ package behavioral.memento;
 
 public class Main {
     public static void main(String[] args) {
-        TextEditor editor = new TextEditor();
-        History history = new History();
+        TextEditorOriginator textEditorOriginator = new TextEditorOriginator();
+        TextMementoCaretaker textMementoCaretaker = new TextMementoCaretaker();
 
-        editor.type("Hello ");
-        history.save(editor);
+        textEditorOriginator.type("Hello ");
+        textMementoCaretaker.save(textEditorOriginator);
 
-        editor.type("World!");
-        history.save(editor);
+        textEditorOriginator.type("World!");
+        textMementoCaretaker.save(textEditorOriginator);
 
-        editor.type(" More text...");
+        textEditorOriginator.type(" More text...");
 
-        System.out.println("Before undo: '" + editor.getText() + "'");
+        System.out.println("Before undo: '" + textEditorOriginator.getText() + "'");
 
-        history.undo(editor);
-        System.out.println("After 1st undo: '" + editor.getText() + "'");
+        textMementoCaretaker.undo(textEditorOriginator);
+        System.out.println("After 1st undo: '" + textEditorOriginator.getText() + "'");
 
-        history.undo(editor);
-        System.out.println("After 2nd undo: '" + editor.getText() + "'");
+        textMementoCaretaker.undo(textEditorOriginator);
+        System.out.println("After 2nd undo: '" + textEditorOriginator.getText() + "'");
 
-        history.undo(editor);
-        System.out.println("After 3rd undo: '" + editor.getText() + "'");
+        textMementoCaretaker.undo(textEditorOriginator);
+        System.out.println("After 3rd undo: '" + textEditorOriginator.getText() + "'");
     }
 }

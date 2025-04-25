@@ -1,6 +1,6 @@
 package behavioral.memento;
 
-public class TextEditor {
+public class TextEditorOriginator {
     private StringBuilder text = new StringBuilder();
 
     public void type(String words) {
