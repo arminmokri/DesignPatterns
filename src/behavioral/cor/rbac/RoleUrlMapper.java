@@ -1,4 +1,4 @@
-package behavioral.chain_of_responsibility.rbac;
+package behavioral.cor.rbac;
 
 import java.util.*;
 import java.util.stream.Collectors;

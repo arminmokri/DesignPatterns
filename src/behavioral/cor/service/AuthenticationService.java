@@ -1,9 +1,9 @@
-package behavioral.chain_of_responsibility.service;
+package behavioral.cor.service;
 
-import behavioral.chain_of_responsibility.exception.AccessDenied;
-import behavioral.chain_of_responsibility.HttpRequest;
-import behavioral.chain_of_responsibility.HttpRequestHandler;
-import behavioral.chain_of_responsibility.rbac.User;
+import behavioral.cor.exception.AccessDenied;
+import behavioral.cor.HttpRequest;
+import behavioral.cor.HttpRequestHandler;
+import behavioral.cor.rbac.User;
 
 public class AuthenticationService extends HttpRequestHandler {
 

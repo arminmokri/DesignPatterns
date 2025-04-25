@@ -1,9 +1,9 @@
-package behavioral.chain_of_responsibility;
+package behavioral.cor;
 
-import behavioral.chain_of_responsibility.service.AuthenticationService;
-import behavioral.chain_of_responsibility.service.AuthorizationService;
-import behavioral.chain_of_responsibility.service.CheckUrlService;
-import behavioral.chain_of_responsibility.service.HttpResponseService;
+import behavioral.cor.service.AuthenticationService;
+import behavioral.cor.service.AuthorizationService;
+import behavioral.cor.service.CheckUrlService;
+import behavioral.cor.service.HttpResponseService;
 
 public class HttpRequestChain {
 

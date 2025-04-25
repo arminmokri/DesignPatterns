@@ -1,4 +1,4 @@
-package behavioral.chain_of_responsibility;
+package behavioral.cor;
 
 public class Main {
 

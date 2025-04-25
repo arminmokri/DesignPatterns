@@ -1,10 +1,10 @@
-package behavioral.chain_of_responsibility.service;
+package behavioral.cor.service;
 
-import behavioral.chain_of_responsibility.*;
-import behavioral.chain_of_responsibility.exception.AccessDenied;
-import behavioral.chain_of_responsibility.rbac.Role;
-import behavioral.chain_of_responsibility.rbac.RoleUrlMapper;
-import behavioral.chain_of_responsibility.rbac.User;
+import behavioral.cor.*;
+import behavioral.cor.exception.AccessDenied;
+import behavioral.cor.rbac.Role;
+import behavioral.cor.rbac.RoleUrlMapper;
+import behavioral.cor.rbac.User;
 
 public class AuthorizationService extends HttpRequestHandler {
 

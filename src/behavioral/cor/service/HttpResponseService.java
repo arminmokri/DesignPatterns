@@ -1,7 +1,7 @@
-package behavioral.chain_of_responsibility.service;
+package behavioral.cor.service;
 
-import behavioral.chain_of_responsibility.HttpRequest;
-import behavioral.chain_of_responsibility.HttpRequestHandler;
+import behavioral.cor.HttpRequest;
+import behavioral.cor.HttpRequestHandler;
 
 import java.util.Objects;
 

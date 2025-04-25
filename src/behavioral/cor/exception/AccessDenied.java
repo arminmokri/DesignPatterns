@@ -1,4 +1,4 @@
-package behavioral.chain_of_responsibility.exception;
+package behavioral.cor.exception;
 
 public class AccessDenied extends RuntimeException {
 

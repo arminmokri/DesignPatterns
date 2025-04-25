@@ -1,9 +1,9 @@
-package behavioral.chain_of_responsibility.service;
+package behavioral.cor.service;
 
-import behavioral.chain_of_responsibility.HttpRequest;
-import behavioral.chain_of_responsibility.HttpRequestHandler;
-import behavioral.chain_of_responsibility.exception.PageNotFound;
-import behavioral.chain_of_responsibility.rbac.RoleUrlMapper;
+import behavioral.cor.HttpRequest;
+import behavioral.cor.HttpRequestHandler;
+import behavioral.cor.exception.PageNotFound;
+import behavioral.cor.rbac.RoleUrlMapper;
 
 public class CheckUrlService extends HttpRequestHandler {
 
