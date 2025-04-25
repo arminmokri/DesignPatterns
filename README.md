@@ -22,7 +22,7 @@
 #### 2- [Command (Action / Transaction)](src/behavioral/command) ✅
 #### 3- [Iterator](src/behavioral/iterator) ✅
 #### 4- [Mediator (Intermediary / Controller)](src/behavioral/mediator) ✅
-#### 5- [Memento](src/behavioral/memento) ✅
+#### 5- [Memento (Snapshot)](src/behavioral/memento) ✅
 #### 6- [Observer](src/behavioral/observer) ✅
 #### 7- [State](src/behavioral/state) ✅
 #### 8- [Strategy](src/behavioral/strategy) ✅
