@@ -6,12 +6,14 @@ public class History {
     private final Stack<TextMemento> backups = new Stack<>();
 
     public void save(TextEditor editor) {
-        backups.push(editor.save());
+        TextMemento textMemento = editor.save();
+        backups.push(textMemento);
     }
 
     public void undo(TextEditor editor) {
         if (!backups.isEmpty()) {
-            editor.restore(backups.pop());
+            TextMemento textMemento = backups.pop();
+            editor.restore(textMemento);
         }
     }
 }
