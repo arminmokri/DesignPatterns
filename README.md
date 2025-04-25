@@ -23,7 +23,7 @@
 #### 3- [Iterator](src/behavioral/iterator) ✅
 #### 4- [Mediator (Intermediary / Controller)](src/behavioral/mediator) ✅
 #### 5- [Memento (Snapshot)](src/behavioral/memento) ✅
-#### 6- [Observer](src/behavioral/observer) ✅
+#### 6- [Observer (Event-Subscriber / Listener)](src/behavioral/observer) ✅
 #### 7- [State](src/behavioral/state) ✅
 #### 8- [Strategy](src/behavioral/strategy) ✅
 #### 9- [Template Method](src/behavioral/template_method) ✅
