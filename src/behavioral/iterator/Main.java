@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         // VHF 54 to 216 MHz
         // UHF  470 and 608 MHz
@@ -25,15 +25,18 @@ public class Main {
         while (iterator.hasMore()) {
             System.out.println(iterator.getNext().toString());
         }
+        System.out.println();
+        Thread.sleep(2000);
 
         // remove 56.5f
         stations.removeStation(tvStations[1]);
 
         // print
-        System.out.println();
         iterator = stations.getStationIterator();
         while (iterator.hasMore()) {
             System.out.println(iterator.getNext().toString());
         }
+        System.out.println();
+        Thread.sleep(2000);
     }
 }
