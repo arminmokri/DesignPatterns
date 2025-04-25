@@ -19,7 +19,7 @@
 
 ## Behavioral
 #### 1- [Chain of Responsibility (CoR / Chain of Command)](src/behavioral/cor) ✅
-#### 2- [Command](src/behavioral/command) ✅
+#### 2- [Command (Action / Transaction)](src/behavioral/command) ✅
 #### 3- [Iterator](src/behavioral/iterator) ✅
 #### 4- [Mediator](src/behavioral/mediator) ✅
 #### 5- [Memento](src/behavioral/memento) ✅
