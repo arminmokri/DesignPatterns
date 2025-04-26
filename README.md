@@ -11,7 +11,7 @@
 ## Structural
 #### 1- [Adapter (Wrapper)](src/structural/adapter) ✅
 #### 2- [Bridge](src/structural/bridge) ✅
-#### 3- [Composite](src/structural/composite) ✅
+#### 3- [Composite (Object Tree)](src/structural/composite) ✅
 #### 4- [Decorator](src/structural/decorator) ✅
 #### 5- [Facade](src/structural/facade) ✅
 #### 6- [Flyweight](src/structural/flyweight) ✅
