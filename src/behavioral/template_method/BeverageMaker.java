@@ -3,11 +3,15 @@ package behavioral.template_method;
 public abstract class BeverageMaker {
 
     // Template method
-    public final void makeBeverage() {
+    public final void makeBeverage() throws InterruptedException {
         boilWater();
+        Thread.sleep(1000);
         brew();
+        Thread.sleep(1000);
         pourIntoCup();
+        Thread.sleep(1000);
         addExtras();
+        Thread.sleep(1000);
     }
 
     protected void boilWater() {

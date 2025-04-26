@@ -8,11 +8,11 @@ public class Main {
         System.out.println("Making tea:");
         tea.makeBeverage();
         System.out.println();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         System.out.println("Making coffee:");
         coffee.makeBeverage();
         System.out.println();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 }
