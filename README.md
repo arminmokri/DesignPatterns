@@ -14,7 +14,7 @@
 #### 3- [Composite (Object Tree)](src/structural/composite) ✅
 #### 4- [Decorator (Wrapper)](src/structural/decorator) ✅
 #### 5- [Facade](src/structural/facade) ✅
-#### 6- [Flyweight](src/structural/flyweight) ✅
+#### 6- [Flyweight (Cache)](src/structural/flyweight) ✅
 #### 7- [Proxy](src/structural/proxy) ✅
 
 ## Behavioral
