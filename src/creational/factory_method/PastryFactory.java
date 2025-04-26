@@ -1,16 +1,10 @@
 package creational.factory_method;
 
-public class PastryFactory {
-    public Pastry createPastry(String type) {
-        return switch (type.toLowerCase()) {
-            case "cake":
-                yield new Cake();
-            case "croissant":
-                yield new Croissant();
-            case "muffin":
-                yield new Muffin();
-            default:
-                throw new IllegalArgumentException("Unknown pastry type: " + type);
-        };
+public abstract class PastryFactory {
+    public abstract Pastry createPastry();
+
+    public void orderPastry() {
+        Pastry pastry = createPastry();
+        pastry.prepare();
     }
 }
