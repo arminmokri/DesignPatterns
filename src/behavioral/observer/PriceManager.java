@@ -25,8 +25,6 @@ public class PriceManager {
     }
 
     private void notifyObservers() {
-        for (PriceObserver observer : subscribers) {
-            observer.update(price);
-        }
+        subscribers.stream().parallel().forEach(priceObserver -> priceObserver.update(this.price));
     }
 }

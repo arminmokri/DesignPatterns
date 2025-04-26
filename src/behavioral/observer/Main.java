@@ -14,17 +14,21 @@ public class Main {
         priceManager.subscribe(webView);
 
         // Simulate price updates
-        Thread.sleep(2000);
         priceManager.setPrice(99.99f);
-
+        System.out.println();
         Thread.sleep(2000);
+
+        // Simulate price updates
         priceManager.setPrice(89.49f);
+        System.out.println();
+        Thread.sleep(2000);
 
         // unsubscribe observers
         priceManager.unsubscribe(mobileView);
 
         // Simulate price updates
-        Thread.sleep(2000);
         priceManager.setPrice(100.12f);
+        System.out.println();
+        Thread.sleep(2000);
     }
 }
