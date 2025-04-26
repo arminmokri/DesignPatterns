@@ -2,11 +2,12 @@
 ### Please support my repo with your star.
 
 ## Creational
-#### 1- [Factory Method (Virtual Constructor)](src/creational/factory_method) ✅
-#### 2- [Abstract Factory](src/creational/abstract_factory) ✅
-#### 3- [Builder](src/creational/builder) ✅
-#### 4- [Prototype (Clone)](src/creational/prototype) ✅
-#### 5- [Singleton](src/creational/singleton) ✅
+#### 1- [Simple Factory (Factory)](src/creational/simple_factory) ✅
+#### 2- [Factory Method (Virtual Constructor)](src/creational/factory_method) ✅
+#### 3- [Abstract Factory](src/creational/abstract_factory) ✅
+#### 4- [Builder](src/creational/builder) ✅
+#### 5- [Prototype (Clone)](src/creational/prototype) ✅
+#### 6- [Singleton](src/creational/singleton) ✅
 
 ## Structural
 #### 1- [Adapter (Wrapper)](src/structural/adapter) ✅
