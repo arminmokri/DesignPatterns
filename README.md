@@ -5,7 +5,7 @@
 #### 1- [Factory Method (Virtual Constructor)](src/creational/factory_method) ✅
 #### 2- [Abstract Factory](src/creational/abstract_factory) ✅
 #### 3- [Builder](src/creational/builder) ✅
-#### 4- [Prototype](src/creational/prototype) ✅
+#### 4- [Prototype (Clone)](src/creational/prototype) ✅
 #### 5- [Singleton](src/creational/singleton) ✅
 
 ## Structural
