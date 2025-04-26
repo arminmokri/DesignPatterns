@@ -1,6 +1,6 @@
 [< Back To Design Patterns](../../../)
 
-# Factory Design Pattern
+# Factory Method Design Pattern
 ### Please support my repo with your star.
 
 ## Definition
