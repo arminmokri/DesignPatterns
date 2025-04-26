@@ -3,7 +3,7 @@ package behavioral.visitor;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         List<FileElement> files = List.of(
                 new TextFile("notes.txt", 10),
                 new ImageFile("photo.png", 1080),
@@ -14,6 +14,7 @@ public class Main {
 
         for (FileElement file : files) {
             file.accept(infoPrinter);
+            Thread.sleep(1000);
         }
     }
 }
