@@ -41,3 +41,15 @@
 #### 8- [Strangler Fig](src/microservices/strangler_fig) ❌
 #### 9- [Bulkhead](src/microservices/bulkhead) ❌
 #### 10- [Sidecar](src/microservices/sidecar) ❌
+
+## Anti-Patterns
+#### 1- [Magic PushButton](src/anti/magic_push_button) ❌
+#### 2- [Boat Anchor](src/anti/boat_anchor) ❌
+#### 3- [Cargo Cult Programming](src/anti/cargo_cult_programming) ❌
+#### 4- [Error Hiding](src/anti/error_hiding) ❌
+#### 5- [Lava Flow](src/anti/lava_flow) ❌
+#### 6- [Spaghetti Code](src/anti/spaghetti_code) ❌
+#### 7- [God Object (The Blob)](src/anti/god_object) ❌
+#### 8- [Copy-Paste Programming](src/anti/copy_paste_programming) ❌
+#### 9- [Golden Hammer](src/anti/golden_hammer) ❌
+#### 10- [Reinventing the Square Wheel](src/anti/reinventing_the_square_wheel) ❌
