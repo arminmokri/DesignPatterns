@@ -20,8 +20,7 @@ public class RemoteController {
         if (!this.commandHistory.isEmpty()) {
             this.commandHistory.pop().undo();
         } else {
-            System.err.println("Nothing for undo");
-            System.err.flush();
+            Main.println("Nothing for undo");
         }
     }
 

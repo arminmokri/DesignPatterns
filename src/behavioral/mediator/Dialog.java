@@ -9,11 +9,11 @@ public class Dialog extends Component {
     }
 
     public void showMessage(String message) {
-        System.out.println("Dialog: message='" + message + "'");
+        Main.println("Dialog: message='" + message + "'");
     }
 
     public void clickOk() {
-        System.out.println("Dialog: action='OK button pressed'");
+        Main.println("Dialog: action='OK button pressed'");
         super.mediator.notify(this, EVENT_OK);
     }
 

@@ -6,22 +6,18 @@ public class DraftState implements State {
         switch (desired) {
             case MODERATION -> {
                 context.setState(new ModerationState());
-                System.out.println("Draft -> Moderation");
-                System.out.flush();
+                Main.println("Draft -> Moderation");
             }
             case PUBLISHED -> {
                 if (role == UserRole.ADMIN) {
                     context.setState(new PublishedState());
-                    System.out.println("Admin: Draft -> Published");
-                    System.out.flush();
+                    Main.println("Admin: Draft -> Published");
                 } else {
-                    System.err.println("Only Admin can publish");
-                    System.err.flush();
+                    Main.errPrintln("Only Admin can publish");
                 }
             }
             default -> {
-                System.err.println("Invalid transition from Draft");
-                System.err.flush();
+                Main.errPrintln("Invalid transition from Draft");
             }
         }
     }

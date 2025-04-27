@@ -20,7 +20,7 @@ public class Login extends Component {
     }
 
     public void doLogin() {
-        System.out.println("Login: action='login button pressed'");
+        Main.println("Login: action='login button pressed'");
         if (this.usernameTextBox.equals("") || this.passwordTextBox.equals("")) {
             super.mediator.notify(this, EVENT_EMPTY_FIELD);
         } else {
@@ -34,12 +34,12 @@ public class Login extends Component {
     }
 
     public void setUsernameTextBox(String usernameTextBox) {
-        System.out.println("Login: action='write \"" + usernameTextBox + "\" in username text box'");
+        Main.println("Login: action='write \"" + usernameTextBox + "\" in username text box'");
         this.usernameTextBox = usernameTextBox;
     }
 
     public void setPasswordTextBox(String passwordTextBox) {
-        System.out.println("Login: action='write \"" + "****" + "\" in password text box'");
+        Main.println("Login: action='write \"" + "****" + "\" in password text box'");
         this.passwordTextBox = passwordTextBox;
     }
 

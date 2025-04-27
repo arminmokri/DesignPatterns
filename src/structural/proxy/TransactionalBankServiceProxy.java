@@ -12,7 +12,7 @@ public record TransactionalBankServiceProxy(
             txManager.commit();
         } catch (Exception e) {
             txManager.rollback();
-            System.err.println("Exception: " + e.getMessage());
+            Main.errPrintln("Exception: " + e.getMessage());
         }
     }
 }

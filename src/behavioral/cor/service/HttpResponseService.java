@@ -2,6 +2,7 @@ package behavioral.cor.service;
 
 import behavioral.cor.HttpRequest;
 import behavioral.cor.HttpRequestHandler;
+import behavioral.cor.Main;
 
 import java.util.Objects;
 
@@ -26,8 +27,7 @@ public class HttpResponseService extends HttpRequestHandler {
         };
 
         if (Objects.nonNull(response)) {
-            System.out.println("HttpResponseService is ok.");
-            System.out.flush();
+            Main.println("HttpResponseService is ok.");
             httpRequest.setResponseCode(200);
             httpRequest.setResponse(response);
             this.goNext(httpRequest);

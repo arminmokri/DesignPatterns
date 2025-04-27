@@ -4,7 +4,29 @@ import java.util.Objects;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
+    public static void main(String[] args) throws InterruptedException {
 
         // Create student 1
         Student student1 = new Student("Micheal", "Miller");
@@ -15,8 +37,10 @@ public class Main {
         Student student2 = student1.makeClone();
 
         // Print student 1 and student 2
-        System.out.println(student1);
-        System.out.println(student2);
+        println(student1.toString());
+        println(student2.toString());
+        println();
+        Thread.sleep(2000);
 
         // Change some info in student 2
         student2.setFirstName("Alice");
@@ -33,9 +57,9 @@ public class Main {
         }
 
         // We implemented a deep copy, which is why it didn't affect Student 1.
-        System.out.println();
-        System.out.println();
-        System.out.println(student1);
-        System.out.println(student2);
+        println(student1.toString());
+        println(student2.toString());
+        println();
+        Thread.sleep(2000);
     }
 }

@@ -20,15 +20,13 @@ public class PowerButton implements Command {
             this.actionMessage = "Air conditioner is turn off";
             this.remoteController.clearCommandHistory();
         }
-        System.out.println(this.actionMessage);
-        System.out.flush();
+        Main.println(this.actionMessage);
         return Boolean.TRUE;
     }
 
     @Override
     public void undo() {
         this.power.toggle();
-        System.out.println("Undo, " + this.actionMessage);
-        System.out.flush();
+        Main.println("Undo, " + this.actionMessage);
     }
 }

@@ -16,9 +16,10 @@ public class Forest {
         trees.add(tree);
     }
 
-    public void draw() {
+    public void draw() throws InterruptedException {
         for (Tree tree : trees) {
             tree.draw();
+            Thread.sleep(500);
         }
     }
 

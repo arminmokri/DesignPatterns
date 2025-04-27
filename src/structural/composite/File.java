@@ -8,6 +8,6 @@ public class File implements FileSystemItem {
     }
 
     public void display(String indent) {
-        System.out.println(indent + "- File: " + name);
+        Main.println(indent + "- File: " + name);
     }
 }

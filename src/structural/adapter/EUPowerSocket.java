@@ -1,15 +1,15 @@
 package structural.adapter;
 
-public class EUPowerSocket {
+public class EUPowerSocket implements PowerSocket {
 
     private final static Integer providedVoltage = 220;
 
     public EUPowerSocket() {
     }
 
-    public Integer provide220V() {
-        System.out.println("Providing " + providedVoltage + "V from EU socket");
-        System.out.flush();
+    @Override
+    public Integer provideVoltage() {
+        Main.println("Providing " + providedVoltage + "V from EU socket");
         return providedVoltage;
     }
 }

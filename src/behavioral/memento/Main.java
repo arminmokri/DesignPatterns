@@ -1,6 +1,29 @@
 package behavioral.memento;
 
 public class Main {
+
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
     public static void main(String[] args) {
         TextEditorOriginator textEditorOriginator = new TextEditorOriginator();
         TextMementoCaretaker textMementoCaretaker = new TextMementoCaretaker();
@@ -13,15 +36,15 @@ public class Main {
 
         textEditorOriginator.type(" More text...");
 
-        System.out.println("Before undo: '" + textEditorOriginator.getText() + "'");
+        println("Before undo: '" + textEditorOriginator.getText() + "'");
 
         textMementoCaretaker.undo(textEditorOriginator);
-        System.out.println("After 1st undo: '" + textEditorOriginator.getText() + "'");
+        println("After 1st undo: '" + textEditorOriginator.getText() + "'");
 
         textMementoCaretaker.undo(textEditorOriginator);
-        System.out.println("After 2nd undo: '" + textEditorOriginator.getText() + "'");
+        println("After 2nd undo: '" + textEditorOriginator.getText() + "'");
 
         textMementoCaretaker.undo(textEditorOriginator);
-        System.out.println("After 3rd undo: '" + textEditorOriginator.getText() + "'");
+        println("After 3rd undo: '" + textEditorOriginator.getText() + "'");
     }
 }

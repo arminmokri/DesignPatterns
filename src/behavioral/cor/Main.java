@@ -2,6 +2,28 @@ package behavioral.cor;
 
 public class Main {
 
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
     public static void main(String[] args) throws InterruptedException {
 
         HttpRequestChain httpRequestChain = new HttpRequestChain();
@@ -19,16 +41,14 @@ public class Main {
             } catch (RuntimeException e) {
             } finally {
                 if (httpRequest.getResponseCode() == 200) {
-                    System.out.println(httpRequest.getResponse());
-                    System.out.flush();
+                    Main.println(httpRequest.getResponse());
                 } else {
-                    System.err.println("Request failed with error code: " + httpRequest.getResponseCode());
-                    System.err.flush();
+                    Main.errPrintln("Request failed with error code: " + httpRequest.getResponseCode());
                 }
             }
 
-            Thread.sleep(3000);
-            System.out.println();
+            Thread.sleep(2000);
+            println();
         }
 
 

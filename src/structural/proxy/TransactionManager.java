@@ -2,14 +2,14 @@ package structural.proxy;
 
 public class TransactionManager {
     public void begin() {
-        System.out.println("Transaction started");
+        Main.println("Transaction started");
     }
 
     public void commit() {
-        System.out.println("Transaction committed");
+        Main.println("Transaction committed");
     }
 
     public void rollback() {
-        System.out.println("Transaction rolled back");
+        Main.println("Transaction rolled back");
     }
 }

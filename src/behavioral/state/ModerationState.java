@@ -6,22 +6,18 @@ public class ModerationState implements State {
         switch (desired) {
             case DRAFT -> {
                 context.setState(new DraftState());
-                System.out.println("Moderation -> Draft");
-                System.out.flush();
+                Main.println("Moderation -> Draft");
             }
             case PUBLISHED -> {
                 if (role == UserRole.ADMIN) {
                     context.setState(new PublishedState());
-                    System.out.println("Admin: Moderation -> Published");
-                    System.out.flush();
+                    Main.println("Admin: Moderation -> Published");
                 } else {
-                    System.err.println("Only Admin can publish");
-                    System.err.flush();
+                    Main.errPrintln("Only Admin can publish");
                 }
             }
             default -> {
-                System.err.println("Invalid transition from Moderation");
-                System.err.flush();
+                Main.errPrintln("Invalid transition from Moderation");
             }
         }
     }

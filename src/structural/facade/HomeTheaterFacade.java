@@ -14,7 +14,7 @@ public class HomeTheaterFacade {
     }
 
     public void watchMovie(String movie) throws InterruptedException {
-        System.out.println("Getting ready to watch a movie...");
+        Main.println("Getting ready to watch a movie...");
         Thread.sleep(1000);
         lights.dim();
         Thread.sleep(1000);
@@ -32,8 +32,8 @@ public class HomeTheaterFacade {
         Thread.sleep(1000);
     }
 
-    public void endMovie()  throws InterruptedException {
-        System.out.println("Shutting movie theater down...");
+    public void endMovie() throws InterruptedException {
+        Main.println("Shutting movie theater down...");
         Thread.sleep(1000);
         dvd.off();
         Thread.sleep(1000);

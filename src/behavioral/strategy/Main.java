@@ -2,6 +2,28 @@ package behavioral.strategy;
 
 public class Main {
 
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
     public static void main(String[] args) throws InterruptedException {
 
         /**
@@ -16,33 +38,35 @@ public class Main {
         PurchaseProduct purchaseProduct = new PurchaseProduct(2505d);
 
         purchaseProduct.pay(null, 2505d);
-        System.out.println(purchaseProduct.toString());
-        System.out.println();
+        println(purchaseProduct.toString());
+        println();
         Thread.sleep(1000);
 
         purchaseProduct.pay(new ChequePaymentStrategy(), 1000d);
-        System.out.println(purchaseProduct.toString());
-        System.out.println();
+        println(purchaseProduct.toString());
+        println();
         Thread.sleep(1000);
 
         purchaseProduct.pay(new CreditCardPaymentStrategy(), 1000d);
-        System.out.println(purchaseProduct.toString());
-        System.out.println();
+        println(purchaseProduct.toString());
+        println();
         Thread.sleep(1000);
 
         purchaseProduct.pay(new DebitCardPaymentStrategy(), 500d);
-        System.out.println(purchaseProduct.toString());
-        System.out.println();
+        println(purchaseProduct.toString());
+        println();
         Thread.sleep(1000);
 
         purchaseProduct.pay(new CashPaymentStrategy(), 50d);
-        System.out.println(purchaseProduct.toString());
-        System.out.println();
+        println(purchaseProduct.toString());
+        println();
         Thread.sleep(1000);
 
-        purchaseProduct.pay(new CashPaymentStrategy(), 5d);
-        System.out.println(purchaseProduct.toString());
-        System.out.println();
-        Thread.sleep(1000);
+        while (!purchaseProduct.isPurchased()) {
+            purchaseProduct.pay(new CashPaymentStrategy(), 5d);
+            println(purchaseProduct.toString());
+            println();
+            Thread.sleep(1000);
+        }
     }
 }

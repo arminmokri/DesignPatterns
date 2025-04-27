@@ -12,6 +12,6 @@ public class TreeType {
     }
 
     public void draw(int x, int y) {
-        System.out.println("Drawing a " + name + " tree at (" + x + "," + y + ") with color " + color + " and texture " + texture);
+        Main.println("Drawing a " + name + " tree at (" + x + "," + y + ") with color " + color + " and texture " + texture);
     }
 }

@@ -1,5 +1,6 @@
 package behavioral.cor.service;
 
+import behavioral.cor.Main;
 import behavioral.cor.exception.AccessDenied;
 import behavioral.cor.HttpRequest;
 import behavioral.cor.HttpRequestHandler;
@@ -15,12 +16,10 @@ public class AuthenticationService extends HttpRequestHandler {
 
         User user = User.getUser(username);
         if (user.isPasswordValid(password)) {
-            System.out.println("AuthenticationService username='" + username + "' and password='" + "****" + "' is correct.");
-            System.out.flush();
+            Main.println("AuthenticationService username='" + username + "' and password='" + "****" + "' is correct.");
             this.goNext(httpRequest);
         } else { // Drop request
-            System.err.println("AuthenticationService username='" + username + "' and password='" + "****" + "' is not correct.");
-            System.err.flush();
+            Main.errPrintln("AuthenticationService username='" + username + "' and password='" + "****" + "' is not correct.");
             httpRequest.setResponseCode(401);
             throw new AccessDenied("access denied, wrong username or password.");
         }

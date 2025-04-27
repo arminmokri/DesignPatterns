@@ -15,12 +15,10 @@ public class TemperatureDownButton implements Command {
         Integer newTemp = this.temperature.tempDown();
         if (!currentTemp.equals(newTemp)) {
             this.actionMessage = "Temperature from '" + currentTemp + "' decreased to '" + newTemp + "'";
-            System.out.println(this.actionMessage);
-            System.out.flush();
+            Main.println(this.actionMessage);
             return Boolean.TRUE;
         } else {
-            System.err.println("Temperature '" + newTemp + "' is already min");
-            System.err.flush();
+            Main.errPrintln("Temperature '" + newTemp + "' is already min");
             return Boolean.FALSE;
         }
 
@@ -29,7 +27,6 @@ public class TemperatureDownButton implements Command {
     @Override
     public void undo() {
         this.temperature.tempUp();
-        System.out.println("Undo, " + this.actionMessage);
-        System.out.flush();
+        Main.println("Undo, " + this.actionMessage);
     }
 }

@@ -14,8 +14,7 @@ public class StatusButton implements Command {
 
     @Override
     public Boolean execute() {
-        System.out.println("Status {" + this.power.toString() + ", " + this.temperature.toString() + ", " + this.fanSpeed.toString() + "}");
-        System.out.flush();
+        Main.println("Status {" + this.power.toString() + ", " + this.temperature.toString() + ", " + this.fanSpeed.toString() + "}");
         return Boolean.FALSE;
     }
 

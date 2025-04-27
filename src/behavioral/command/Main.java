@@ -2,6 +2,28 @@ package behavioral.command;
 
 public class Main {
 
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
     public static void main(String[] args) throws InterruptedException {
 
         RemoteController remoteController = new RemoteController();
@@ -30,7 +52,6 @@ public class Main {
 
         for (Command command : commands) {
             remoteController.pressButton(command);
-
             Thread.sleep(1000);
         }
 

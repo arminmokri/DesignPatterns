@@ -2,6 +2,7 @@ package behavioral.cor.service;
 
 import behavioral.cor.HttpRequest;
 import behavioral.cor.HttpRequestHandler;
+import behavioral.cor.Main;
 import behavioral.cor.exception.PageNotFound;
 import behavioral.cor.rbac.RoleUrlMapper;
 
@@ -13,12 +14,10 @@ public class CheckUrlService extends HttpRequestHandler {
         String url = httpRequest.getUrl();
 
         if (RoleUrlMapper.isUrlValid(url)) {
-            System.out.println("CheckUrlService url='" + url + "' resolved");
-            System.out.flush();
+            Main.println("CheckUrlService url='" + url + "' resolved");
             this.goNext(httpRequest);
         } else { // Drop request
-            System.err.println("CheckUrlService url='" + url + "' not resolved");
-            System.err.flush();
+            Main.errPrintln("CheckUrlService url='" + url + "' not resolved");
             httpRequest.setResponseCode(404);
             throw new PageNotFound("Unable to resolve url='" + url + "'");
         }

@@ -1,8 +1,8 @@
 package structural.adapter;
 
-public class VoltageAdapter implements USPowerSocket, PlugInDevice {
+public class VoltageAdapter implements PowerSocket, PlugInDevice {
 
-    private final static Integer sourceVoltage = 220;
+    private final static Integer neededVoltage = 220;
     private final static Integer finalVoltage = 110;
 
     private final EUPowerSocket euSocket;
@@ -14,22 +14,24 @@ public class VoltageAdapter implements USPowerSocket, PlugInDevice {
     }
 
     @Override
+    public Integer neededVoltage() {
+        return neededVoltage;
+    }
+
+    @Override
     public void plugIn() {
         if (!powered) {
-            Integer voltage = euSocket.provide220V();
-            if (voltage.equals(sourceVoltage)) {
+            Integer provideVoltage = euSocket.provideVoltage();
+            if (provideVoltage.equals(neededVoltage())) {
                 powered = Boolean.TRUE;
-                System.out.println("Voltage adapter plugged into EU socket and powered on");
-            } else if (voltage.equals(0)) {
-                System.err.println("Voltage adapter no voltage in socket");
-                System.err.flush();
+                Main.println("Voltage adapter plugged into EU socket and powered on");
+            } else if (provideVoltage.equals(0)) {
+                Main.errPrintln("Voltage adapter no voltage in socket");
             } else {
-                System.err.println("Voltage adapter voltage unsupported");
-                System.err.flush();
+                Main.errPrintln("Voltage adapter voltage unsupported");
             }
         } else {
-            System.err.println("Voltage adapter is already turn on");
-            System.err.flush();
+            Main.errPrintln("Voltage adapter is already turn on");
         }
     }
 
@@ -37,11 +39,9 @@ public class VoltageAdapter implements USPowerSocket, PlugInDevice {
     public void Unplug() {
         if (powered) {
             powered = Boolean.FALSE;
-            System.out.println("Voltage adapter is turn off");
-            System.out.flush();
+            Main.println("Voltage adapter is turn off");
         } else {
-            System.err.println("Voltage adapter is already turn off");
-            System.err.flush();
+            Main.errPrintln("Voltage adapter is already turn off");
         }
     }
 
@@ -51,11 +51,11 @@ public class VoltageAdapter implements USPowerSocket, PlugInDevice {
     }
 
     @Override
-    public Integer provide110V() {
+    public Integer provideVoltage() {
         Integer steppedDown;
         if (powered) {
             steppedDown = finalVoltage;
-            System.out.println("Adapter: Converting to " + steppedDown + "V");
+            Main.println("Adapter: Converting to " + steppedDown + "V");
         } else {
             steppedDown = 0;
         }

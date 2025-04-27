@@ -15,16 +15,14 @@ public class FanSpeedButton implements Command {
         String fromSpeed = this.fanSpeed.getCurrentSpeed();
         String toSpeed = this.fanSpeed.next();
         this.actionMessage = "Fan Speed from '" + fromSpeed + "' changed to '" + toSpeed + "'";
-        System.out.println(this.actionMessage);
-        System.out.flush();
+        Main.println(this.actionMessage);
         return Boolean.TRUE;
     }
 
     @Override
     public void undo() {
         this.fanSpeed.previous();
-        System.out.println("Undo, " + this.actionMessage);
-        System.out.flush();
+        Main.println("Undo, " + this.actionMessage);
     }
 
 }

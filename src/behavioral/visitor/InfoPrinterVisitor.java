@@ -4,16 +4,16 @@ public class InfoPrinterVisitor implements FileVisitor {
 
     @Override
     public void visit(TextFile textFile) {
-        System.out.println("TextFile: " + textFile.getName() + " (" + textFile.getSize() + "KB)");
+        Main.println("TextFile: " + textFile.getName() + " (" + textFile.getSize() + "KB)");
     }
 
     @Override
     public void visit(ImageFile imageFile) {
-        System.out.println("ImageFile: " + imageFile.getName() + " (" + imageFile.getResolution() + "px)");
+        Main.println("ImageFile: " + imageFile.getName() + " (" + imageFile.getResolution() + "px)");
     }
 
     @Override
     public void visit(AudioFile audioFile) {
-        System.out.println("AudioFile: " + audioFile.getName() + " (" + audioFile.getDuration() + "sec)");
+        Main.println("AudioFile: " + audioFile.getName() + " (" + audioFile.getDuration() + "sec)");
     }
 }

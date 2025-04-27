@@ -6,17 +6,14 @@ public class PublishedState implements State {
         switch (desired) {
             case DRAFT -> {
                 context.setState(new DraftState());
-                System.out.println("Published -> Draft");
-                System.out.flush();
+                Main.println("Published -> Draft");
             }
             case MODERATION -> {
                 context.setState(new ModerationState());
-                System.out.println("Published -> Moderation");
-                System.out.flush();
+                Main.println("Published -> Moderation");
             }
             default -> {
-                System.err.println("Can't move to " + desired + " from Published");
-                System.err.flush();
+                Main.errPrintln("Can't move to " + desired + " from Published");
             }
         }
     }

@@ -2,7 +2,29 @@ package creational.builder;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
+    public static void main(String[] args) throws InterruptedException {
 
         Bicycle myBike = new Bicycle.Builder("M", 26, "Black")
                 .frameMaterial("Aluminum")
@@ -19,14 +41,16 @@ public class Main {
                 .weight(12)
                 .build();
 
-        System.out.println(myBike.toString());
-        System.out.println();
+        println(myBike.toString());
+        println();
+        Thread.sleep(2000);
 
         Car myCar = Car.builder("Renault")
                 .model("L90")
                 .year(1398)
                 .build();
 
-        System.out.println(myCar.toString());
+        println(myCar.toString());
+        println();
     }
 }

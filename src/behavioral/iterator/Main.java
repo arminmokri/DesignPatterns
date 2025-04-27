@@ -4,6 +4,28 @@ import java.util.Arrays;
 
 public class Main {
 
+    public static void println(String x) {
+        System.out.println(x);
+        System.out.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
+    }
+
     public static void main(String[] args) throws InterruptedException {
 
         // VHF 54 to 216 MHz
@@ -23,9 +45,9 @@ public class Main {
         // print
         Iterator<TvStation> iterator = stations.getStationIterator();
         while (iterator.hasMore()) {
-            System.out.println(iterator.getNext().toString());
+            println(iterator.getNext().toString());
         }
-        System.out.println();
+        println();
         Thread.sleep(2000);
 
         // remove 56.5f
@@ -34,9 +56,9 @@ public class Main {
         // print
         iterator = stations.getStationIterator();
         while (iterator.hasMore()) {
-            System.out.println(iterator.getNext().toString());
+            println(iterator.getNext().toString());
         }
-        System.out.println();
+        println();
         Thread.sleep(2000);
     }
 }

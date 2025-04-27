@@ -2,46 +2,73 @@ package behavioral.mediator;
 
 public class Main {
 
-    private static GuiMediator guiMediator;
-
-    public static void printStatus() throws InterruptedException {
-        System.out.println(guiMediator.toString());
-        System.out.println();
+    public static void println(String x) {
+        System.out.println(x);
         System.out.flush();
-        Thread.sleep(1000);
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void errPrintln(String x) {
+        System.err.println(x);
+        System.err.flush();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    public static void println() {
+        println("");
     }
 
     public static void main(String[] args) throws InterruptedException {
 
+        GuiMediator guiMediator;
+
         guiMediator = new GuiMediator();
-        printStatus();
+        println(guiMediator.toString());
+        println();
+        Thread.sleep(1000);
 
         guiMediator.getLogin().doLogin();
-        printStatus();
+        println(guiMediator.toString());
+        println();
+        Thread.sleep(1000);
 
         guiMediator.getDialog().clickOk();
-        printStatus();
+        println(guiMediator.toString());
+        println();
+        Thread.sleep(1000);
 
         guiMediator.getLogin().setUsernameTextBox("alice");
         guiMediator.getLogin().setPasswordTextBox("abc");
         guiMediator.getLogin().doLogin();
-        printStatus();
+        println(guiMediator.toString());
+        println();
+        Thread.sleep(1000);
 
         guiMediator.getDialog().clickOk();
-        printStatus();
+        println(guiMediator.toString());
+        println();
+        Thread.sleep(1000);
 
         try {
             guiMediator.getDialog().clickOk();
-            printStatus();
         } catch (RuntimeException runtimeException) {
-            System.err.println("you can not do any action with invisible component");
-            System.err.println();
-            System.err.flush();
+            errPrintln("you can not do any action with invisible component");
+        } finally {
+            println();
+            Thread.sleep(1000);
         }
 
         guiMediator.getLogin().setUsernameTextBox("alice");
         guiMediator.getLogin().setPasswordTextBox("123");
         guiMediator.getLogin().doLogin();
-        printStatus();
+        println(guiMediator.toString());
+        println();
+        Thread.sleep(1000);
     }
 }

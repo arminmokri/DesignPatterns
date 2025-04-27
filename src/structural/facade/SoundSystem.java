@@ -2,14 +2,14 @@ package structural.facade;
 
 public class SoundSystem {
     public void on() {
-        System.out.println("Sound system ON");
+        Main.println("Sound system ON");
     }
 
     public void setVolume(int level) {
-        System.out.println("Volume set to " + level);
+        Main.println("Volume set to " + level);
     }
 
     public void off() {
-        System.out.println("Sound system OFF");
+        Main.println("Sound system OFF");
     }
 }

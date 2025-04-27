@@ -18,12 +18,10 @@ public class AuthorizationService extends HttpRequestHandler {
         Role role = user.getRole();
 
         if (RoleUrlMapper.isAccessAllowed(role, url)) {
-            System.out.println("AuthorizationService this username '" + username + "' with role=" + role.toString() + " has access to url='" + url + "'");
-            System.out.flush();
+            Main.println("AuthorizationService this username '" + username + "' with role=" + role.toString() + " has access to url='" + url + "'");
             this.goNext(httpRequest);
         } else { // Drop request
-            System.err.println("AuthorizationService this username '" + username + "' with role=" + role.toString() + " doesn't have access to url='" + url + "'");
-            System.err.flush();
+            Main.errPrintln("AuthorizationService this username '" + username + "' with role=" + role.toString() + " doesn't have access to url='" + url + "'");
             httpRequest.setResponseCode(403);
             throw new AccessDenied("access denied, this user cannot access this page");
         }

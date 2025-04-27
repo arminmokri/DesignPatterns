@@ -4,8 +4,7 @@ public class ChequePaymentStrategy implements PaymentStrategy {
 
     @Override
     public Boolean pay(Double amount) {
-        System.out.println("Paid $" + amount + " using Cheque.");
-        System.out.flush();
+        Main.println("Paid $" + amount + " using Cheque.");
         return Boolean.TRUE;
     }
 

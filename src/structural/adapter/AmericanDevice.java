@@ -3,33 +3,33 @@ package structural.adapter;
 public class AmericanDevice implements PlugInDevice {
 
     private final static Integer neededVoltage = 110;
-
-    private final USPowerSocket socket;
+    private final PowerSocket socket;
     private Boolean powered;
 
-    public AmericanDevice(USPowerSocket socket) {
+    public AmericanDevice(PowerSocket socket) {
         this.socket = socket;
         this.powered = Boolean.FALSE;
     }
 
     @Override
+    public Integer neededVoltage() {
+        return neededVoltage;
+    }
+
+    @Override
     public void plugIn() {
         if (!powered) {
-            Integer voltage = socket.provide110V();
-            if (voltage.equals(neededVoltage)) {
+            Integer provideVoltage = socket.provideVoltage();
+            if (provideVoltage.equals(neededVoltage())) {
                 powered = Boolean.TRUE;
-                System.out.println("American device is working safely on " + voltage + "V");
-                System.out.flush();
-            } else if (voltage.equals(0)) {
-                System.err.println("American device no voltage in socket");
-                System.err.flush();
+                Main.println("American device is working safely on " + provideVoltage + "V");
+            } else if (provideVoltage.equals(0)) {
+                Main.errPrintln("American device no voltage in socket");
             } else {
-                System.err.println("American device unsafe voltage!");
-                System.err.flush();
+                Main.errPrintln("American device unsafe voltage!");
             }
         } else {
-            System.err.println("American device is already turn on");
-            System.err.flush();
+            Main.errPrintln("American device is already turn on");
         }
     }
 
@@ -37,11 +37,9 @@ public class AmericanDevice implements PlugInDevice {
     public void Unplug() {
         if (powered) {
             powered = Boolean.FALSE;
-            System.out.println("American device is turn off");
-            System.out.flush();
+            Main.println("American device is turn off");
         } else {
-            System.err.println("American device is already turn off");
-            System.err.flush();
+            Main.errPrintln("American device is already turn off");
         }
     }
 

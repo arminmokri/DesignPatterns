@@ -18,25 +18,21 @@ public class PurchaseProduct {
     public void pay(PaymentStrategy paymentStrategy, double amount) {
         if (Objects.nonNull(paymentStrategy)) {
             if (amount <= this.remaining()) {
-                if (!paymentStrategy.pay(amount)) {
-                    System.err.println("Payment failed");
-                    System.err.flush();
-                }
                 PaymentEntry paymentEntry = new PaymentEntry(paymentStrategy, amount);
                 paymentEntry.doPayment();
                 payments.add(paymentEntry);
+                if (!paymentEntry.isSucceed()) {
+                    Main.errPrintln("Payment failed");
+                }
             } else {
-                System.err.println("Payment must be less than remaining amount");
-                System.err.flush();
+                Main.errPrintln("Payment must be less than remaining amount");
             }
         } else {
-            System.err.println("Payment strategy not set");
-            System.err.flush();
+            Main.errPrintln("Payment strategy not set");
         }
 
         if (this.isPurchased()) {
-            System.out.println("Purchase completed");
-            System.out.flush();
+            Main.println("Purchase completed");
         }
     }
 
