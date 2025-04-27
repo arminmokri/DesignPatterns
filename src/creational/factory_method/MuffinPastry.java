@@ -1,8 +1,8 @@
 package creational.factory_method;
 
-public class MuffinFactory extends PastryFactory {
+public class MuffinPastry extends Pastry {
     @Override
-    public Pastry createPastry() {
+    public PastryItem createPastryItem() {
         return new Muffin();
     }
 }

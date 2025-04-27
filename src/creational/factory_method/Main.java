@@ -4,18 +4,18 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        PastryFactory cakeFactory = new CakeFactory();
-        cakeFactory.orderPastry();
+        Pastry cakePastry = new CakePastry();
+        cakePastry.orderItem();
         System.out.println();
         Thread.sleep(1000);
 
-        PastryFactory croissantFactory = new CroissantFactory();
-        croissantFactory.orderPastry();
+        Pastry croissantPastry = new CroissantPastry();
+        croissantPastry.orderItem();
         System.out.println();
         Thread.sleep(1000);
 
-        PastryFactory muffinFactory = new MuffinFactory();
-        muffinFactory.orderPastry();
+        Pastry muffinPastry = new MuffinPastry();
+        muffinPastry.orderItem();
         System.out.println();
         Thread.sleep(1000);
 
