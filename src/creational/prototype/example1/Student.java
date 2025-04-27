@@ -1,4 +1,4 @@
-package creational.prototype;
+package creational.prototype.example1;
 
 import java.util.ArrayList;
 import java.util.List;

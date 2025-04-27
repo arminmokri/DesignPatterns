@@ -1,4 +1,4 @@
-package creational.prototype;
+package creational.prototype.example1;
 
 public interface Cloneable<E> {
 
