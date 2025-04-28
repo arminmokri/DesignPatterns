@@ -42,6 +42,6 @@ public class Main {
         root.add(docs);
         root.add(pics);
 
-        root.display("");
+        root.display(null);
     }
 }
