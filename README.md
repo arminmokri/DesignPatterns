@@ -21,14 +21,15 @@
 ## Behavioral
 #### 1- [Chain of Responsibility (CoR / Chain of Command)](src/behavioral/cor) ✅
 #### 2- [Command (Action / Transaction)](src/behavioral/command) ✅
-#### 3- [Iterator](src/behavioral/iterator) ✅
-#### 4- [Mediator (Intermediary / Controller)](src/behavioral/mediator) ✅
-#### 5- [Memento (Snapshot)](src/behavioral/memento) ✅
-#### 6- [Observer (Event-Subscriber / Listener)](src/behavioral/observer) ✅
-#### 7- [State](src/behavioral/state) ✅
-#### 8- [Strategy](src/behavioral/strategy) ✅
-#### 9- [Template Method](src/behavioral/template_method) ✅
-#### 10- [Visitor](src/behavioral/visitor) ✅
+#### 3- [Interpreter](src/behavioral/interpreter) ❌
+#### 4- [Iterator](src/behavioral/iterator) ✅
+#### 5- [Mediator (Intermediary / Controller)](src/behavioral/mediator) ✅
+#### 6- [Memento (Snapshot)](src/behavioral/memento) ✅
+#### 7- [Observer (Event-Subscriber / Listener)](src/behavioral/observer) ✅
+#### 8- [State](src/behavioral/state) ✅
+#### 9- [Strategy](src/behavioral/strategy) ✅
+#### 10- [Template Method](src/behavioral/template_method) ✅
+#### 11- [Visitor](src/behavioral/visitor) ✅
 
 ## Microservices
 #### 1- [API Gateway](src/microservices/api_gateway) ❌
