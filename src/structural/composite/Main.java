@@ -28,19 +28,28 @@ public class Main {
 
         Directory root = new Directory("root");
 
-        Directory docs = new Directory("Documents");
-        Directory pics = new Directory("Pictures");
+        Directory dirDocs = new Directory("Documents");
+        Directory dirProj = new Directory("Projects");
+        Directory dirPics = new Directory("Pictures");
 
-        File file1 = new File("resume.pdf");
-        File file2 = new File("photo.jpg");
-        File file3 = new File("budget.xlsx");
+        File fileProjects = new File("Projects.xls");
+        File fileResumeDOC = new File("resume.doc");
+        File fileResumePDF = new File("resume.pdf");
+        File filePhoto = new File("photo.jpg");
+        File fileBudgetXLS = new File("budget.xls");
+        File fileBudgetPDF = new File("budget.pdf");
 
-        docs.add(file1);
-        docs.add(file3);
-        pics.add(file2);
+        dirDocs.add(fileResumePDF);
+        root.add(fileBudgetXLS);
+        dirDocs.add(fileResumeDOC);
+        dirPics.add(filePhoto);
 
-        root.add(docs);
-        root.add(pics);
+        root.add(dirPics);
+        root.add(dirDocs);
+        root.add(dirProj);
+
+        dirProj.add(fileProjects);
+        root.add(fileBudgetPDF);
 
         root.display(null);
     }

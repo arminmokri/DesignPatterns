@@ -10,4 +10,15 @@ public class File implements FileSystemItem {
     public void display(String indent) {
         Main.println(indent + "- File: " + name);
     }
+
+    @Override
+    public int compareTo(FileSystemItem fileSystemItem) {
+        if (fileSystemItem instanceof File) {
+            File other = (File) fileSystemItem;
+            return this.name.compareTo(other.name);
+        } else {
+            return 1;
+        }
+
+    }
 }

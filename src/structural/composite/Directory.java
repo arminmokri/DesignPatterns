@@ -1,8 +1,6 @@
 package structural.composite;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Directory implements FileSystemItem {
     private String name;
@@ -15,6 +13,7 @@ public class Directory implements FileSystemItem {
 
     public void add(FileSystemItem item) {
         children.add(item);
+        Collections.sort(children);
     }
 
     @Override
@@ -25,6 +24,16 @@ public class Directory implements FileSystemItem {
         Main.println(indent + "+ Directory: " + name);
         for (FileSystemItem item : children) {
             item.display(indent + "  ");
+        }
+    }
+
+    @Override
+    public int compareTo(FileSystemItem fileSystemItem) {
+        if (fileSystemItem instanceof Directory) {
+            Directory other = (Directory) fileSystemItem;
+            return this.name.compareTo(other.name);
+        } else {
+            return -1;
         }
     }
 }
