@@ -21,7 +21,7 @@
 ## Behavioral
 #### 1- [Chain of Responsibility (CoR / Chain of Command)](src/behavioral/cor) ✅
 #### 2- [Command (Action / Transaction)](src/behavioral/command) ✅
-#### 3- [Interpreter](src/behavioral/interpreter) ❌
+#### 3- [Interpreter](src/behavioral/interpreter) ✅
 #### 4- [Iterator](src/behavioral/iterator) ✅
 #### 5- [Mediator (Intermediary / Controller)](src/behavioral/mediator) ✅
 #### 6- [Memento (Snapshot)](src/behavioral/memento) ✅
