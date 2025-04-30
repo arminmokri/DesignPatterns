@@ -38,7 +38,7 @@
 #### 4- [Service Discovery](src/microservices/service_discovery) ❌
 #### 5- [Event Sourcing](src/microservices/event_sourcing) ❌
 #### 6- [CQRS (Command Query Responsibility Segregation)](src/microservices/cqrs) ❌
-#### 7- [Saga](src/microservices/saga) ❌
+#### 7- [Saga](src/microservices/saga) ✅
 #### 8- [Strangler Fig](src/microservices/strangler_fig) ❌
 #### 9- [Bulkhead](src/microservices/bulkhead) ❌
 #### 10- [Sidecar](src/microservices/sidecar) ❌
