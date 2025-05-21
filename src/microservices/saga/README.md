@@ -25,4 +25,8 @@ The Saga Pattern is a design and data management strategy initially introduced i
 - **No Global Locking:** Sagas avoid holding distributed locks, making them suitable for high-scale environments.
 - **Failure Scenarios Must Be Well-Handled:** Consider what happens if compensations themselves fail or are interrupted mid-execution.
 
+<p align="center">
+  <a href="../../behavioral/visitor">⬅️ <strong>Visitor</strong></a>
+</p>
+
 [< Back To Design Patterns](../../../)
