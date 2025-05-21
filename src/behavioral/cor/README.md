@@ -23,5 +23,11 @@ The Chain of Responsibility Design Pattern is a behavioral pattern that allows a
 - **Flexible Order:** Handlers can be added, removed, or reordered without impacting the overall architecture, increasing system extensibility.
 - **Termination Condition:** Ensure that the request is eventually handled or gracefully rejected if no handler processes it. Avoid infinite loops in poorly designed chains.
 
+<p align="center">
+  <a href="../../structural/proxy">⬅️ <strong>Proxy</strong></a>
+  🔸
+  <a href="../../behavioral/command"><strong>Command</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
 
