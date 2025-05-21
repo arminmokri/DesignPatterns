@@ -24,9 +24,9 @@ The Builder Design Pattern is a creational pattern that separates the constructi
 - **Separation of Concerns:** The construction logic is separated from the object’s representation, making the codebase cleaner and easier to maintain.
 
 <p align="center">
-  <a href="../abstract_factory">⬅️ <strong>Abstract Factory</strong></a>
+  <a href="../../creational/abstract_factory">⬅️ <strong>Abstract Factory</strong></a>
   🔸
-  <a href="../prototype"><strong>Prototype</strong> ➡️</a>
+  <a href="../../creational/prototype"><strong>Prototype</strong> ➡️</a>
 </p>
 
 [< Back To Design Patterns](../../../)
