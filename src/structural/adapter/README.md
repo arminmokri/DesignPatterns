@@ -23,4 +23,10 @@ The Adapter Design Pattern is a structural pattern that allows incompatible inte
 - **Object vs. Class Adapter:** Use object adapters (composition) to wrap adaptees or class adapters (inheritance) where language support exists (e.g., multiple inheritance in C++).
 - **Minimal Intrusion:** The adapter should not modify the existing code or interface of the adaptee, preserving its original integrity.
 
+<p align="center">
+  <a href="../../creational/singleton">⬅️ <strong>Singleton</strong></a>
+  🔸
+  <a href="../../structural/bridge"><strong>Bridge</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
