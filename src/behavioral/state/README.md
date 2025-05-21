@@ -23,4 +23,10 @@ The State Design Pattern is a behavioral pattern that allows an object to change
 - **Avoids Conditional Complexity:** Eliminates complex conditionals based on state inside the context class by moving behavior into the state classes themselves.
 - **State Transitions are Encapsulated:** State transitions can be managed inside the state objects or explicitly via the context, offering clean separation and control.
 
+<p align="center">
+  <a href="../../behavioral/observer">⬅️ <strong>Observer</strong></a>
+  🔸
+  <a href="../../behavioral/strategy"><strong>Strategy</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
