@@ -24,9 +24,9 @@ The Factory Method Design Pattern is a creational pattern that defines an interf
 - **Can Be Combined with Other Patterns:** Often used alongside patterns like Singleton (for factory instance) or Template Method (for creation steps).
 
 <p align="center">
-  <a href="../simple_factory">⬅️ <strong>Simple Factory</strong></a>
+  <a href="../../creational/simple_factory">⬅️ <strong>Simple Factory</strong></a>
   🔸
-  <a href="../abstract_factory"><strong>Abstract Factory</strong> ➡️</a>
+  <a href="../../creational/abstract_factory"><strong>Abstract Factory</strong> ➡️</a>
 </p>
 
 [< Back To Design Patterns](../../../)
