@@ -23,4 +23,10 @@ The Bridge Design Pattern is a structural pattern that decouples an abstraction 
 - **Reduces Class Explosion:** Instead of creating a class for every combination of abstraction and implementation, use the bridge to dynamically pair them.
 - **Flexible Scalability:** Adding new abstractions or implementations does not affect the existing code, making the system open for extension but closed for modification.
 
+<p align="center">
+  <a href="../../structural/adapter">⬅️ <strong>Adapter</strong></a>
+  🔸
+  <a href="../../structural/composite"><strong>Composite</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
