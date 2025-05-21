@@ -23,4 +23,10 @@ The Iterator Design Pattern is a behavioral pattern that provides a way to acces
 - **Multiple Iterators:** Different types of iterators (e.g., reverse, filtered) can be implemented for the same collection, enabling flexible traversal strategies.
 - **Fail-Safe or Fail-Fast:** Consider whether the iterator should detect changes in the underlying collection during iteration (fail-fast) or tolerate them (fail-safe).
 
+<p align="center">
+  <a href="../../behavioral/interpreter">⬅️ <strong>Interpreter</strong></a>
+  🔸
+  <a href="../../behavioral/mediator"><strong>Mediator</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
