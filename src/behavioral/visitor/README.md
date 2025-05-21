@@ -23,4 +23,10 @@ The Visitor Design Pattern is a behavioral pattern that lets you separate algori
 - **Tight Coupling to Object Structure:** Adding a new element type to the structure requires updating all visitors — this makes the pattern great for stable structures with changing behaviors.
 - **Centralizes Operations:** Logic for multiple operations is centralized in visitor classes, separating them from the data classes and enhancing maintainability.
 
+<p align="center">
+  <a href="../../behavioral/template_method">⬅️ <strong>Template Method</strong></a>
+  🔸
+  <a href="../../microservices/api_gateway"><strong>API Gateway</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
