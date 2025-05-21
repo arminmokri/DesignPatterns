@@ -24,7 +24,7 @@ The Simple Factory Pattern is a creational pattern that centralizes object creat
 - **Good for Small Projects:** Best suited for applications where the number of product types is relatively small and stable.
 
 <p align="center">
-  <a href="../factory_method"><strong>Factory Method</strong> ➡️</a>
+  <a href="../../creational/factory_method"><strong>Factory Method</strong> ➡️</a>
 </p>
 
 [< Back To Design Patterns](../../../)
