@@ -24,7 +24,7 @@ The Singleton Design Pattern ensures that a class has only one instance and prov
 - **Global Access:** The Singleton instance is usually accessed via a static method, ensuring that the instance is accessible from anywhere in the application.
 
 <p align="center">
-  <a href="../prototype">⬅️ <strong>Prototype</strong></a>
+  <a href="../../creational/prototype">⬅️ <strong>Prototype</strong></a>
   🔸
   <a href="../../structural/adapter"><strong>Adapter</strong> ➡️</a>
 </p>
