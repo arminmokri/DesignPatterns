@@ -23,4 +23,10 @@ The Composite Design Pattern is a structural pattern that allows you to compose 
 - **Uniform Access:** Clients don’t need to distinguish between simple and complex elements, improving flexibility and simplicity.
 - **Optional Parent Reference:** Composites can optionally store a reference to their parent or context, useful for traversing or modifying the tree.
 
+<p align="center">
+  <a href="../../structural/bridge">⬅️ <strong>Bridge</strong></a>
+  🔸
+  <a href="../../structural/decorator"><strong>Decorator</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
