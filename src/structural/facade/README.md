@@ -23,4 +23,10 @@ The Facade Design Pattern is a structural pattern that provides a simplified, un
 - **Improves Maintainability:** By centralizing access to complex subsystems, changes to the underlying systems can often be managed within the facade without affecting clients.
 - **Ideal for Layered Architectures:** In layered systems, facades help define clear boundaries between layers and reduce direct dependencies.
 
+<p align="center">
+  <a href="../../structural/decorator">⬅️ <strong>Decorator</strong></a>
+  🔸
+  <a href="../../structural/flyweight"><strong>Flyweight</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
