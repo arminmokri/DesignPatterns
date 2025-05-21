@@ -24,4 +24,10 @@ The Proxy Design Pattern is a structural pattern that provides a surrogate or pl
 - **Multiple Proxy Types:** Variants include virtual proxy (lazy initialization), protection proxy (authorization), remote proxy (networking), and smart proxy (extra logic like caching or logging).
 - **Decouples Responsibilities:** Allows you to separate resource-intensive or cross-cutting concerns from the core business logic in the real object.
 
+<p align="center">
+  <a href="../../structural/flyweight">⬅️ <strong>Flyweight</strong></a>
+  🔸
+  <a href="../../behavioral/cor"><strong>Chain of Responsibility</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
