@@ -23,4 +23,10 @@ The Mediator Design Pattern is a behavioral pattern that promotes loose coupling
 - **Mediator Interface:** Define a mediator interface for sending/receiving messages or events; concrete implementations control the workflow between participants.
 - **Maintenance Trade-Off:** While it simplifies communication, the mediator can become overly complex if too much logic is centralized — balance is key.
 
+<p align="center">
+  <a href="../../behavioral/iterator">⬅️ <strong>Iterator</strong></a>
+  🔸
+  <a href="../../behavioral/memento"><strong>Memento</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
