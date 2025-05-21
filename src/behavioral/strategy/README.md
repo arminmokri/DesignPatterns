@@ -23,4 +23,10 @@ The Strategy Design Pattern is a behavioral pattern that enables selecting an al
 - **Runtime Flexibility:** The strategy can be selected at runtime, either manually or programmatically, allowing systems to adapt their behavior dynamically.
 - **Avoid Conditional Logic:** Instead of using multiple if-else or switch statements, delegate the behavior to different strategy implementations to clean up the codebase.
 
+<p align="center">
+  <a href="../../behavioral/state">⬅️ <strong>State</strong></a>
+  🔸
+  <a href="../../behavioral/template_method"><strong>Template Method</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
