@@ -23,4 +23,10 @@ The Command Design Pattern is a behavioral pattern that turns a request into a s
 - **Invoker Role:** An invoker is responsible for triggering the execution of commands and may also support queuing or undo/redo stacks.
 - **Decoupling Sender and Receiver:** The invoker (e.g., UI element) does not need to know the implementation details of the receiver. This makes it easier to modify or extend behavior.
 
+<p align="center">
+  <a href="../../behavioral/cor">⬅️ <strong>Chain of Responsibility</strong></a>
+  🔸
+  <a href="../../behavioral/interpreter"><strong>Interpreter</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
