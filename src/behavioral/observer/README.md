@@ -23,4 +23,10 @@ The Observer Design Pattern is a behavioral pattern where an object, known as th
 - **Observer Removal:** Observers should be able to unregister themselves when they no longer need updates from the subject, to avoid memory leaks or unnecessary processing.
 - **Multiple Observers:** The Observer pattern allows one subject to have multiple observers, enabling a one-to-many dependency relationship.
 
+<p align="center">
+  <a href="../../behavioral/memento">⬅️ <strong>Memento</strong></a>
+  🔸
+  <a href="../../behavioral/state"><strong>State</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
