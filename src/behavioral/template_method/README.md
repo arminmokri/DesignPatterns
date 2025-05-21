@@ -23,4 +23,10 @@ The Template Method Design Pattern is a behavioral pattern that defines the skel
 - **Inversion of Control:** This pattern is an example of the "Hollywood Principle" — “Don’t call us, we’ll call you.” The base class controls the algorithm and calls subclass methods at the right time.
 - **Promotes Code Reuse:** Common logic stays in the base class, reducing duplication and improving maintainability.
 
+<p align="center">
+  <a href="../../behavioral/strategy">⬅️ <strong>Strategy</strong></a>
+  🔸
+  <a href="../../behavioral/visitor"><strong>Visitor</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
