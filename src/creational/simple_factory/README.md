@@ -23,4 +23,8 @@ The Simple Factory Pattern is a creational pattern that centralizes object creat
 - **Limited Scalability:** Adding a new product requires modifying the factory code, which can violate the Open/Closed Principle if changes are frequent.
 - **Good for Small Projects:** Best suited for applications where the number of product types is relatively small and stable.
 
+<p align="center">
+  <a href="../factory_method"><strong>Factory Method</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
