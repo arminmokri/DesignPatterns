@@ -23,4 +23,10 @@ The Interpreter Design Pattern is a behavioral pattern that defines a way to eva
 - **Good for Simple Languages:** Interpreter is ideal when the grammar is simple and unlikely to change often. For complex languages, other tools (like parser generators) are usually more efficient.
 - **Can Become Hard to Maintain:** As the language grows, maintaining many grammar classes can make the code hard to manage, suggesting a switch to more powerful parsing techniques.
 
+<p align="center">
+  <a href="../../behavioral/command">⬅️ <strong>Command</strong></a>
+  🔸
+  <a href="../../behavioral/iterator"><strong>Iterator</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
