@@ -26,4 +26,10 @@ The Memento Design Pattern is a behavioral pattern that allows an object to capt
 - **Efficiency Considerations:** Saving deep object state frequently can be costly in terms of memory; use wisely based on use case (e.g., incremental snapshots or limiting history size).
 - **Immutable Memento:** Mementos should typically be immutable once created, ensuring consistent rollback behavior.
 
+<p align="center">
+  <a href="../../behavioral/mediator">⬅️ <strong>Mediator</strong></a>
+  🔸
+  <a href="../../behavioral/observer"><strong>Observer</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
