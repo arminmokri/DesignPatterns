@@ -24,9 +24,9 @@ The Prototype Design Pattern is a creational pattern that allows cloning existin
 - **Prototype Registry:** In some implementations, a central registry of prototypes is maintained. New objects are cloned from the registered prototypes, allowing easier management of base templates.
 
 <p align="center">
-  <a href="../builder">⬅️ <strong>Builder</strong></a>
+  <a href="../../creational/builder">⬅️ <strong>Builder</strong></a>
   🔸
-  <a href="../singleton"><strong>Singleton</strong> ➡️</a>
+  <a href="../../creational/singleton"><strong>Singleton</strong> ➡️</a>
 </p>
 
 [< Back To Design Patterns](../../../)
