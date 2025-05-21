@@ -23,4 +23,10 @@ The Abstract Factory Design Pattern is a creational pattern that provides an int
 - **Switching Product Families:** Switching between product variants (e.g., dark theme vs. light theme) is easy by changing the factory, without modifying client logic.
 - **Complexity vs. Flexibility:** Though powerful, Abstract Factory can lead to increased code complexity due to the number of interfaces and classes involved — best used when multiple families are truly needed.
 
+<p align="center">
+  <a href="../factory_method">⬅️ <strong>Factory Method</strong></a>
+  🔸
+  <a href="../builder"><strong>Builder</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
