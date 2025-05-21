@@ -23,4 +23,10 @@ The Flyweight Design Pattern is a structural pattern that focuses on reducing me
 - **Memory Efficiency:** The main goal is to reduce memory usage in scenarios with high object count and redundancy.
 - **Immutable Shared State:** Flyweight objects are typically immutable and stateless — changes should happen in the extrinsic context, not in the flyweight itself.
 
+<p align="center">
+  <a href="../../structural/facade">⬅️ <strong>Facade</strong></a>
+  🔸
+  <a href="../../structural/proxy"><strong>Proxy</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
