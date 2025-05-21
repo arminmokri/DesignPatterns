@@ -23,4 +23,10 @@ The Decorator Design Pattern is a structural pattern that allows behavior to be 
 - **Order Matters:** The order in which decorators are applied can affect the final behavior, so careful composition is needed.
 - **Transparent Wrapping:** Clients using the final decorated object should not need to know whether it has been wrapped — interaction remains consistent.
 
+<p align="center">
+  <a href="../../structural/composite">⬅️ <strong>Composite</strong></a>
+  🔸
+  <a href="../../structural/facade"><strong>Facade</strong> ➡️</a>
+</p>
+
 [< Back To Design Patterns](../../../)
