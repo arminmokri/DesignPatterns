@@ -1,5 +1,5 @@
 # Design Patterns
-### Please support my repo with your star.
+### Please support my repo with your ⭐
 
 ## Creational
 #### 1- [Simple Factory (Factory)](src/creational/simple_factory) 🏭
